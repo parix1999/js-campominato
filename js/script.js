@@ -10,14 +10,23 @@ function checkNumber (array, numMax) {
         }
     }
 }
-var utenteNumber = parseInt(prompt('Inserisci numero'));
-var computeNumber = randomNumber(1, 100);
-console.log(computeNumber)
-
 listComputerNum = [];
 listInputUtente = [];
-var onlyOneNUmberComputer = listComputerNum.push(computeNumber);
-var onlyOneNUmberUtente = listInputUtente.push(utenteNumber);
+
+for (var i = 1; i <= 5; i++) {
+    var utenteNumber = parseInt(prompt('Inserisci numero'));
+}
+var numbersUtente = utenteNumber[i].push(listInputUtente);
+
+var computerNumber = randomNumber(1, 100);
+for (var x = 1; x <= 16; x++){
+    var computersNumbers = computerNumber[x].push(listComputerNum);
+}
+console.log(computerNumber)
+
+
+var onlyOneNumberComputer = listComputerNum.push(computerNumber);
+
 
 console.log(listComputerNum)
 console.log(listInputUtente)            // Fino a qua funziona 
