@@ -10,12 +10,17 @@ function checkNumber (array, numMax) {
         }
     }
 }
-var utenteNumber = parseInt(prompy('Inserisci numero'));
+var utenteNumber = parseInt(prompt('Inserisci numero'));
 var computeNumber = randomNumber(1, 100);
-
-var onlyOneNUmberComputer = listComputerNum.push(computeNumber);
-var onlyOneNUmberUtente = listInputUtente.push(utenteNumber);
+console.log(computeNumber)
 
 listComputerNum = [];
 listInputUtente = [];
+var onlyOneNUmberComputer = listComputerNum.push(computeNumber);
+var onlyOneNUmberUtente = listInputUtente.push(utenteNumber);
+
+console.log(listComputerNum)
+console.log(listInputUtente)
+
+
 
