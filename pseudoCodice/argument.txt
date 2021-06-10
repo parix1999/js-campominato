@@ -1,0 +1,35 @@
+Il computer deve generare 16 numeri casuali tra 1 e 100.   //function
+I numeri non possono essere duplicati.      //con il while e la lista (Magari una funzione ?)
+In seguito deve chiedere all’utente per (100 - 16) 
+volte di inserire un numero alla volta, sempre compreso tra 1 e 100.   // con un while oppure for 
+L’utente non può inserire più volte lo stesso numero.      //con il while e la lista (Magari una funzione ?)
+Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua 
+chiedendo all’utente un altro numero. 
+La partita termina quando il giocatore inserisce un numero “vietato” o raggiunge il numero 
+massimo possibile di numeri consentiti.
+Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero 
+consentito.
+
+1. genero 16 numeri => non sarebbe male una funzione:
+    1.function randomNumeri (min, max)
+        return math.floor(mathrandom()*(max - min + 1) + min)
+    /
+    c'è da creare una lista vuota listNum: []
+    while listNum <=16
+        se non c'è il numero lo pusho nella listNum
+    /
+/
+Potrei fare una funzione per controllare se i numeri sono presenti o  meno nella lista
+        
+        2.function checkNumber (array, numDaraggiungere)/
+            while (array.lenght <= numDaraggiungere)/
+                if numDaraggiungere.includes(array.lenght)/
+                    return true
+                /else/
+                    return false
+                /
+            /
+        /
+        var fuoriFunzione = listNum.push(checkNumber(listNum, 16))
+
+     
