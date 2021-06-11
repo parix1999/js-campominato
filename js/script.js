@@ -22,14 +22,18 @@ console.log('Numeri computer', numComputer);
 
 // si fa la lista che conterrà i numeri inseriti dall'utente; 
 numUtente = [];
-
+var checkGame = false; 
 /* ora si genera un ciclo while per chiedere all'utente i numeri da inserire nell' array
 e poi per far in modo da non far ripetere il numero selezionato.
 */
 while (numUtente.length < 5) {
     // inPut utente:
     var numeroUtente = parseInt(prompt('Inserisci un numero da 1 a 100'));
-    // to do : e se l'utente inserisce un numero > di 100 o minore di 1??
+    // to do : e se l'utente inserisce un numero > di 100 o minore di 1 o se non è un numero??
+    while (numeroUtente > 100 || numeroUtente < 1) {
+        alert('No devi inserire un NUMERO e che sia maggiore di 1 e minore di 100');
+        numeroUtente = parseInt(prompt('Inserisci un numero da 1 a 100'));
+    }
 
     // controllo del numero inserito dell'utente se è all'interno dell'array, e che non sia anche lo stesso generato dal computer:
     if (!numUtente.includes(numeroUtente)) {
@@ -39,11 +43,15 @@ while (numUtente.length < 5) {
             numUtente.push(numeroUtente);
             // mi stampi un all'alert che non c'è e quindi me lo aggiungi:
             alert('niente bomba sei salvo, al momento');
+            // variabile flag per il controllo della vincita, qui sarà true perchè è giusto e l'utente deve continuare a mettere i numeri:
+            checkGame = true;
         
         // se il numero è presente nella lista generata dal computer si trova la bomba e quindi si perde: 
         }else{
             // mi avvisi che ho trovato la mina e quindi ho perso:
             alert('Booom');
+            // qui il controllo sara falso per via della perdita: 
+            checkGame = false;
             // esci dal ciclo e finisce l'iterazione:
             break; 
         }        
