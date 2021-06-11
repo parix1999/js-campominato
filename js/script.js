@@ -33,7 +33,7 @@ while (numUtente.length < 84) {
     // inPut utente:
     var numeroUtente = parseInt(prompt('Inserisci un numero da 1 a 100'));
     // to do : e se l'utente inserisce un numero > di 100 o minore di 1 o se non è un numero??
-    while (numeroUtente > 100 || numeroUtente < 1) {
+    while ((numeroUtente > 100 || numeroUtente < 1) || (isNaN(numeroUtente))) {
         alert('No devi inserire un NUMERO e che sia maggiore di 1 e minore di 100');
         numeroUtente = parseInt(prompt('Inserisci un numero da 1 a 100'));
     }
@@ -61,8 +61,6 @@ while (numUtente.length < 84) {
         alert('Numero già inserito')
     }  
 }
-
-
 
 if (!checkGame) {
     document.getElementById('result').innerHTML += 'Hai vinto e indovinato tutti i numeri : ' + ' '  + numUtente.length ;
