@@ -33,3 +33,7 @@ Potrei fare una funzione per controllare se i numeri sono presenti o  meno nella
         var fuoriFunzione = listNum.push(checkNumber(listNum, 16))
 
      
+
+
+
+
