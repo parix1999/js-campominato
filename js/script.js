@@ -33,13 +33,19 @@ while (numUtente.length < 5) {
 
     // controllo del numero inserito dell'utente se è all'interno dell'array, e che non sia anche lo stesso generato dal computer:
     if (!numUtente.includes(numeroUtente)) {
-        // se il numero dell'utente non c'è nella lista dei numeri generati dal computer allora si continua:
+        // se il numero dell'utente non c'è nella lista dei numeri generati dal computer allora :
         if (!numComputer.includes(numeroUtente)) {
+            // me lo aggiungi alla array dell'utente;
             numUtente.push(numeroUtente);
-            alert('Hai vinto');
+            // mi stampi un all'alert che non c'è e quindi me lo aggiungi:
+            alert('niente bomba sei salvo, al momento');
+        
         // se il numero è presente nella lista generata dal computer si trova la bomba e quindi si perde: 
         }else{
-            alert('Hai perso');
+            // mi avvisi che ho trovato la mina e quindi ho perso:
+            alert('Booom');
+            // esci dal ciclo e finisce l'iterazione:
+            break; 
         }        
     }
 }
