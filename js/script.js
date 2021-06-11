@@ -22,11 +22,14 @@ console.log('Numeri computer', numComputer);
 
 // si fa la lista che conterrà i numeri inseriti dall'utente; 
 numUtente = [];
+// variabile per controllare la fine del gioco
 var checkGame = false; 
+
+
 /* ora si genera un ciclo while per chiedere all'utente i numeri da inserire nell' array
 e poi per far in modo da non far ripetere il numero selezionato.
 */
-while (numUtente.length < 5) {
+while (numUtente.length < 84) {
     // inPut utente:
     var numeroUtente = parseInt(prompt('Inserisci un numero da 1 a 100'));
     // to do : e se l'utente inserisce un numero > di 100 o minore di 1 o se non è un numero??
@@ -43,19 +46,26 @@ while (numUtente.length < 5) {
             numUtente.push(numeroUtente);
             // mi stampi un all'alert che non c'è e quindi me lo aggiungi:
             alert('niente bomba sei salvo, al momento');
-            // variabile flag per il controllo della vincita, qui sarà true perchè è giusto e l'utente deve continuare a mettere i numeri:
-            checkGame = true;
+            console.log('Numeri utente', numUtente);
         
         // se il numero è presente nella lista generata dal computer si trova la bomba e quindi si perde: 
         }else{
             // mi avvisi che ho trovato la mina e quindi ho perso:
             alert('Booom');
             // qui il controllo sara falso per via della perdita: 
-            checkGame = false;
+            checkGame = true;
             // esci dal ciclo e finisce l'iterazione:
             break; 
-        }        
-    }
+        }      
+    }else{
+        alert('Numero già inserito')
+    }  
 }
 
-console.log('Numeri utente', numUtente);
+
+
+if (!checkGame) {
+    document.getElementById('result').innerHTML += 'Hai vinto e indovinato tutti i numeri : ' + ' '  + numUtente.length ;
+}else{
+    document.getElementById('result').innerHTML += 'Hai perso ma hai indovinato: '+ ' '  + numUtente.length ;
+}
